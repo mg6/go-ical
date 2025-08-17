@@ -63,9 +63,7 @@ func NewCalendar() *Calendar {
 func (cal *Calendar) Events() []Event {
 	l := make([]Event, 0, len(cal.Children))
 	for _, child := range cal.Children {
-		if child.Name == CompEvent {
-			l = append(l, Event{child})
-		}
+		l = append(l, Event{child})
 	}
 	return l
 }
